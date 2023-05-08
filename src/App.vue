@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p v-bind:class="count % 2 === 0 ? 'show' : 'hidden'">{{ count }}</p>
+    <!-- <p v-bind:class="count % 2 === 0 ? 'show' : 'hidden'">{{ count }}</p>
     <input v-if="inputType === 'text'" type="text">
     <input v-else type="date">
     <button @click="showInput">{{ inputType === 'text' ? 'Text' : 'Date time' }}</button>
@@ -9,15 +9,17 @@
     </div>
     <input type="text" v-model="product" />
     <button @click="submitProduct">Submit</button>
-    <HelloWorld :products="products" />
+    <HelloWorld :products="products" /> -->
+    <ChangeTab/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import ChangeTab from './page/changeTab.vue'
 export default {
   name: 'App',
-  components: { HelloWorld },
+  components: { ChangeTab },
   data() {
     return {
       product: '',
